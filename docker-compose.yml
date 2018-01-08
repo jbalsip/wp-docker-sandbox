@@ -4,7 +4,7 @@ services:
   my-wp:
     image: wordpress
     volumes:
-      - test-theme:/var/www/html/wp-content/themes/test-theme
+      - ./test-theme:/var/www/html/wp-content/themes/test-theme
     ports:
       - "8080:80"
     environment:
