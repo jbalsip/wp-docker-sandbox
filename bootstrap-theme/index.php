@@ -30,7 +30,7 @@
 
     <!-- Custom styles for this template -->
 
-    <link href="blog.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
 
 
 
