@@ -1,0 +1,1 @@
+These are files from the [Developing a WordPress Theme Tutorial](https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/)
