@@ -6,6 +6,7 @@ services:
     volumes:
       - ./test-theme:/var/www/html/wp-content/themes/test-theme
       - ./bootstrap-theme:/var/www/html/wp-content/themes/bootstrap-theme
+      - ./kapi-theme:/var/www/html/wp-content/themes/kapi-theme
     ports:
       - "8080:80"
     environment:
