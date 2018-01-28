@@ -1,0 +1,41 @@
+body {
+  background-color: #FFF;
+  margin: 0 auto;
+}
+
+/* navigation */
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: dimgray;
+}
+
+li {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+.blog-title {
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+    
+}
+
+.blog-post-summary {
+    display: inline-block;
+    width: 250px;
+    height: 500px;
+}
+
+.featured-image {
+    width: 250px;
+}
