@@ -13,6 +13,8 @@ nav {
     top: 0;
     position: fixed;
     width: 100%;
+    color: white;
+    background-color: black;
     z-index: 10;
 }
 
@@ -20,12 +22,11 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    color: white;
-    background-color: dimgray;
 }
 
 nav li {
-    display: inline-block;
+    position: relative; 
+    float: left;
     width: 80px;
     text-align: center;
 }
@@ -37,19 +38,20 @@ nav li {
 }
 
 .main-contents {
-    display: inline-block;
+    display: block;
+    float: left;
     max-width: 750px;
 }
 
-
 .side-contents {
-    display: inline-block;
+    float: left;
     vertical-align:top;
 }
 
 .blog-post-summary {
     vertical-align: top;
-    display: inline-block;
+    display: block;
+    float: left;
     width: 250px;
     height: 500px;
 }
@@ -63,3 +65,9 @@ nav li {
     margin: 0;
     padding: 0;
 } 
+
+footer::before {
+    content:"";
+    display: block;
+    clear: both;
+}
