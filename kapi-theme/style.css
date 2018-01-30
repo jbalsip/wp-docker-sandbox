@@ -11,7 +11,7 @@ nav {
     z-index: 10;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ ul {
     background-color: dimgray;
 }
 
-li {
+nav li {
     display: inline-block;
     width: 80px;
     text-align: center;
