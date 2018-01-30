@@ -49,15 +49,9 @@ nav li {
 
 .blog-post-summary {
     vertical-align: top;
-    float: left;
+    display: inline-block;
     width: 250px;
     height: 500px;
-}
-
-.main-contents::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 .featured-image {
