@@ -3,6 +3,11 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
 /* navigation */
 nav {
     top: 0;
@@ -31,6 +36,17 @@ nav li {
     top: 20px;
 }
 
+.main-contents {
+    display: inline-block;
+    max-width: 750px;
+}
+
+
+.side-contents {
+    display: inline-block;
+    vertical-align:top;
+}
+
 .blog-post-summary {
     vertical-align: top;
     display: inline-block;
@@ -41,3 +57,9 @@ nav li {
 .featured-image {
     width: 250px;
 }
+
+.side-contents ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} 
