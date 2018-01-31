@@ -34,23 +34,27 @@ nav li {
 .blog-title {
     box-sizing: border-box;
     position: relative;
-    top: 20px;
+    text-align: center;
 }
 
 .root-container {
     margin: 0 auto;
-    width: 75%;
+    max-width: 900px;
 }
 
 .main-contents {
     display: block;
     float: left;
     max-width: 750px;
+    width: 100%;
+    margin-right: 150px;
 }
 
 .side-contents {
-    float: left;
+    float: right;
     vertical-align:top;
+    width: 150px;
+    margin-left: -150px;
 }
 
 .blog-post-summary {
@@ -71,8 +75,15 @@ nav li {
     padding: 0;
 } 
 
+/*
 footer::before {
     content:"";
     display: block;
     clear: both;
+}
+*/
+
+footer {
+    clear: both;
+    text-align: center;
 }
