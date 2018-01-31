@@ -37,6 +37,11 @@ nav li {
     top: 20px;
 }
 
+.root-container {
+    margin: 0 auto;
+    width: 75%;
+}
+
 .main-contents {
     display: block;
     float: left;
