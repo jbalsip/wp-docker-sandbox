@@ -8,6 +8,11 @@ h2 {
     margin: 0;
 }
 
+#page {
+    width: 900px;
+    margin: 0 auto;
+}
+
 /* navigation */
 nav {
     top: 0;
@@ -86,4 +91,34 @@ footer::before {
 footer {
     clear: both;
     text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    #page {
+        width: 750px;
+    }
+    .side-contents {
+        float: left;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #page {
+        width: 500px;
+    }
+    .side-contents {
+        float: left;
+        margin-left: 0;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    #page {
+        width: 250px;
+    }
+        .side-contents {
+        float: left;
+        margin-left: 0;
+    }    
 }
