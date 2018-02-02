@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Khula');
+
 body {
-  background-color: #FFF;
-  margin: 0 auto;
+    background-color: #FFF;
+    margin: 0 auto;
+    font-family: 'Khula', sans-serif;
 }
 
 h2 {
@@ -19,6 +22,7 @@ h2 {
     top: 0;
     position: fixed;
     width: 100%;
+    height: 30px;
     background-color: black;
     z-index: 9;
 }
@@ -29,6 +33,8 @@ nav {
     width: 100%;
     color: white;
     z-index: 10;
+    height: 30px;
+    padding: 6px 0;
 }
 
 nav ul {
@@ -48,6 +54,7 @@ nav li {
     box-sizing: border-box;
     position: relative;
     text-align: center;
+    margin: 50px 0px 10px 0px;
 }
 
 .root-container {
@@ -59,15 +66,11 @@ nav li {
     display: block;
     float: left;
     max-width: 750px;
-    width: 100%;
-    margin-right: 150px;
 }
 
 .side-contents {
-    float: right;
-    vertical-align:top;
+    float: left;
     width: 150px;
-    margin-left: -150px;
 }
 
 .blog-post-summary {
@@ -75,11 +78,27 @@ nav li {
     display: block;
     float: left;
     width: 250px;
-    height: 500px;
+    height: 350px;
+    line-height: 1.4em;
 }
 
 .featured-image {
     width: 250px;
+}
+
+.blog-post-summary h2 {
+    font-size: 1.1em;
+    padding: 0;
+}
+
+.blog-post-summary .date-published {
+    margin: 0.5em 0;
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+.blog-post-summary p {
+    margin: 0.8em 0;
 }
 
 .side-contents ul {
@@ -105,28 +124,16 @@ footer {
     #page {
         width: 750px;
     }
-    .side-contents {
-        float: left;
-        margin-left: 0;
-    }
 }
 
 @media screen and (max-width: 750px) {
     #page {
         width: 500px;
     }
-    .side-contents {
-        float: left;
-        margin-left: 0;
-    }    
 }
 
 @media screen and (max-width: 500px) {
     #page {
         width: 250px;
     }
-        .side-contents {
-        float: left;
-        margin-left: 0;
-    }    
 }
