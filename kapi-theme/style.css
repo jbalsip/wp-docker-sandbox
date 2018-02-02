@@ -12,7 +12,7 @@ h2 {
 }
 
 #page {
-    width: 900px;
+    width: 1220px;
     margin: 0 auto;
 }
 
@@ -59,18 +59,19 @@ nav li {
 
 .root-container {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1220px;
 }
 
 .main-contents {
     display: block;
     float: left;
-    max-width: 750px;
+    max-width: 900px;
 }
 
 .side-contents {
+    display: block;
     float: left;
-    width: 150px;
+    width: 320px;
 }
 
 .blog-post-summary {
@@ -80,6 +81,7 @@ nav li {
     width: 250px;
     height: 350px;
     line-height: 1.4em;
+    padding: 0 25px 0 25px;
 }
 
 .featured-image {
@@ -120,20 +122,21 @@ footer {
     text-align: center;
 }
 
+@media screen and (max-width: 1220px) {
+    #page {
+        width: 900px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     #page {
-        width: 750px;
+        width: 600px;
     }
+
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
     #page {
-        width: 500px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #page {
-        width: 250px;
+        width: 300px;
     }
 }
