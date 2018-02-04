@@ -18,19 +18,21 @@ h1, h2 {
 
 /* navigation */
 .nav-background {
-    top: 0;
+    bottom: 0;
     position: fixed;
     width: 100%;
     background-color: black;
     z-index: 9;
+    padding: 0.5em;
 }
 
 .topnav {
     overflow: hidden;
-    top: 0;
+    bottom: 0;
     position: fixed;
     width: 100%;
     z-index: 10;
+    background-color: black;
 /*    padding: 6px 0; */
 }
 
@@ -44,10 +46,10 @@ h1, h2 {
     display: block;
     position: relative; 
     float: left;
-    width: 80px;
     text-align: center;
     color: white;
     text-decoration: none;
+    padding: 0.5em;
 }
 
 .topnav a:hover {
@@ -55,14 +57,12 @@ h1, h2 {
     color: black;
 }
 
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
 
+/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
 }
+
 
 /* title */
 .blog-title {
@@ -147,21 +147,32 @@ footer {
 }
 
 /* media query */
-@media screen and (min-width: 320px) {   /* max-width: 499px? */
-    .topnav a:not(:first-child) {
+@media screen and (max-width: 500px) {   /* max-width: 499px? */
+    
+/* When the screen is less than 500 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */    
+    .topnav li:not(:first-child) {
         display: none;
+    }
+    .topnav li:last-child {
+        display: block;
     }
     .topnav a.icon {
         float: right;
         display: block;
+        padding-right: 0.8em;
     }
-    .topnav.responsive {
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive li:not(:first-child) {
+        display: block;
+    }
+/*    .topnav.responsive {
         position: relative;
-    }
+    }*/
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
-        top: 0;
+        bottom: 0;
     }
     .topnav.responsive a {
         float: none;
@@ -171,6 +182,15 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
+    .nav-background {
+        top: 0;
+        bottom: inherit;
+    }
+    .topnav {
+        top: 0;
+        bottom: inherit;
+        padding-left: 1.5%;
+    }
     .main-contents {
         float: left;
         max-width: 100%;
@@ -187,7 +207,6 @@ footer {
     .blog-post-summary p {
         padding: 0;
     }
-    
 }
 
 @media screen and (min-width: 768px) {
@@ -215,7 +234,6 @@ footer {
         float: left;
         width: 25%;
     }
-    
 }
 
 @media screen and (min-width: 1250px) {
