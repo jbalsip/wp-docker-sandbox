@@ -120,7 +120,8 @@
         </div>
  
             <script>
-                document.getElementById("click").onclick = function() {myFunction()};
+            (function () {
+                document.getElementById("click").onclick = myFunction;
                 
                 function myFunction() {
                     var x = document.getElementById("myTopnav");
@@ -130,6 +131,7 @@
                         x.className = "topnav";
                     }
                 }
+            })();
             </script>        
         
     </body>
