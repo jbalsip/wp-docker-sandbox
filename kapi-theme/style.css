@@ -164,6 +164,7 @@ footer::before {
 footer {
     clear: both;
     text-align: center;
+    padding-bottom: 2em;
 }
 
 /* media query */
@@ -224,9 +225,10 @@ footer {
     }
     .blog-post-summary h2,
     .blog-post-summary .date-published,
-    .blog-post-summary p {
+    .blog-post-summary p, footer {
         padding: 0;
     }
+    
 }
 
 @media screen and (min-width: 768px) {
