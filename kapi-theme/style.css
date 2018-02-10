@@ -95,6 +95,8 @@ h1, h2 {
     width: 100%;
     height: 300px;
     line-height: 1.4em;
+    margin-bottom: 1em;
+    overflow: hidden;
 }
 
 .image-container {
@@ -135,7 +137,6 @@ h1, h2 {
 .blog-post-summary p {
     margin: 0.8em 0;
     padding: 0 2.5%;
-    overflow: hidden;
 }
 
 /* side contents */
@@ -221,9 +222,13 @@ footer {
         display: block;
         text-align: left;
     }
+    .topnav {
+        opacity: 0.9;
+        filter: alpha(opacity=90); /* for IE8 and earlier */
+    }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 450px) {
     .nav-background {
         top: 0;
         bottom: inherit;
