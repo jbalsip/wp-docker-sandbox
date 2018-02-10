@@ -126,10 +126,10 @@ h1, h2 {
 }
 
 .blog-post-summary .date-published {
+    display: block;
     margin: 0.5em 0;
     font-size: 0.8em;
-    line-height: 1em;
-    padding: 0 2.5%
+    line-height: 1.2em;
 }
 
 .blog-post-summary p {
