@@ -6,7 +6,7 @@ body {
     font-family: 'Khula', sans-serif;
 }
 
-h1, h2 {
+h1, h2, ul {
     padding: 0;
     margin: 0;
 }
@@ -16,24 +16,32 @@ h1, h2 {
     margin: 0 auto;
 }
 
+/* menu */
+.menu-container {
+    bottom: 0;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    z-index: 9;
+/*    padding: 0.5em;*/
+}
+
 /* navigation */
 .nav-background {
     bottom: 0;
     position: fixed;
     width: 100%;
     background-color: black;
-    z-index: 9;
+    z-index: 8;
     padding: 0.5em;
 }
 
 .topnav {
-    overflow: hidden;
     bottom: 0;
-    position: fixed;
+/*    position: fixed;*/
     width: 100%;
     z-index: 10;
-    background-color: black;
-/*    padding: 6px 0; */
+/*    background-color: black;*/
 }
 
 .topnav ul {
@@ -52,7 +60,7 @@ h1, h2 {
     padding: 0.5em;
 }
 
-.topnav a:hover {
+.topnav a:hover, .social-menu a:hover {
     background-color: #ddd;
     color: black;
 }
@@ -64,6 +72,31 @@ h1, h2 {
     cursor: pointer;
 }
 
+/* Social Menu */
+.social-menu {
+    bottom: 0;
+    z-index: 9;
+    padding-right: 2em;
+}
+
+.social-menu ul {
+    list-style: none;
+    float: right;
+}
+
+.social-menu li {
+    color: white;
+    float: left;
+}
+
+.social-menu a {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
 
 /* title */
 .blog-title {
@@ -222,14 +255,18 @@ footer {
         display: block;
         text-align: left;
     }
-    .topnav {
+    .menu-container {
         opacity: 0.9;
         filter: alpha(opacity=90); /* for IE8 and earlier */
     }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
     .nav-background {
+        top: 0;
+        bottom: inherit;
+    }
+    .menu-container {
         top: 0;
         bottom: inherit;
     }
@@ -237,6 +274,11 @@ footer {
         top: 0;
         bottom: inherit;
         padding-left: 1.5%;
+    }
+    .social-menu {
+        top: 0;
+        bottom: inherit;
+        padding-right: 1.5%;
     }
     .main-contents {
         float: left;
@@ -289,7 +331,7 @@ footer {
 }
 
 @media screen and (min-width: 1250px) {
-    #page {
+    #page , .menu-container {
         width: 1250px;
     }
 }
