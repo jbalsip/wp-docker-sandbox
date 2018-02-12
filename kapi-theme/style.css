@@ -23,7 +23,6 @@ h1, h2, ul {
     background-color: black;
     width: 100%;
     z-index: 9;
-/*    padding: 0.5em;*/
 }
 
 /* navigation */
@@ -38,10 +37,8 @@ h1, h2, ul {
 
 .topnav {
     bottom: 0;
-/*    position: fixed;*/
     width: 100%;
     z-index: 10;
-/*    background-color: black;*/
 }
 
 .topnav ul {
@@ -103,12 +100,9 @@ h1, h2, ul {
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    margin: 2em 0px 0px 0px;
+    margin: 1em 0px 0px 0px;
 }
 
-.blog-title .blog-description {
-    margin: 0;
-}
 
 /* root */
 .root-container {
@@ -166,7 +160,6 @@ h1, h2, ul {
     font-size: 0.8em;
     line-height: 1.2em;
 }
-
 .blog-post-summary p {
     margin: 0.8em 0;
     padding: 0 2.5%;
@@ -177,13 +170,12 @@ h1, h2, ul {
     display: block;
     width: 95%;
     padding: 0 2.5%;
-    
 }
 
 .side-contents ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0;   
 } 
 
 /*scroll to top button*/
@@ -279,6 +271,12 @@ footer {
         top: 0;
         bottom: inherit;
         padding-right: 1.5%;
+    }
+    .blog-title {
+        margin-top: 5em;
+    }
+    .blog-description {
+        margin-bottom: 1.5em;
     }
     .main-contents {
         float: left;
