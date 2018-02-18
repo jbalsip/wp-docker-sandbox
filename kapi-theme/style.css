@@ -140,13 +140,21 @@ h1, h2, ul {
     object-fit: cover;
     opacity: 1.0;
     filter: alpha(opacity=100); /* for IE8 and earlier */
-    transition: all 0.5s; /* Animation */
+    transition: transform 0.5s linear; /* Animation */
+    -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
 }
 
 .featured-image:hover {
     opacity: 0.5;
     filter: alpha(opacity=50); /* for IE8 and earlier */
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
 }
 
 .blog-post-summary h2 {
