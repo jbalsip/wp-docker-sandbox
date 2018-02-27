@@ -3,14 +3,14 @@
                     <div class="blog-posts-container">
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="images/1.jpg" alt="stationaries on a desk"></div>
+                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/1.jpg" alt="stationaries on a desk"></div>
                             <p class="date-published">2018-01-05</p>
                             <h2 class="blog-post-title">Our all new kapibara collection</h2>
                             <p class="">Feet evil to hold long he open knew an no. Apartments occasional boisterous as solicitude to introduced. Or fifteen covered we enjoyed demesne is in prepare.</p>
                         </div>
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="images/kuma.png" alt="laptop and coffee">
+                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/kuma.png" alt="laptop and coffee">
                             </div>
                             <p class="date-published">2018-01-02</p>
                             <h2 class="blog-post-title">High quality benefits in products</h2>
@@ -18,7 +18,7 @@
                         </div>
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="images/kuma2.jpg" alt="coffee and plant">
+                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/kuma2.jpg" alt="coffee and plant">
                             </div>
                             <p class="date-published">2017-12-30</p>
                             <h2 class="blog-post-title">Building your brand is simple</h2>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="images/4.jpg" alt="pencil and eraser">
+                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/4.jpg" alt="pencil and eraser">
                             </div>
                             <p class="date-published">2017-12-15</p>
                             <h2 class="blog-post-title">Take a break you deserve it</h2>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="images/5.jpg" alt="plant drawings">
+                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/5.jpg" alt="plant drawings">
                             </div>
                             <p class="date-published">2017-11-23</p>
                             <h2 class="blog-post-title">Produxtivity tools & tips</h2>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="images/6.jpg" alt="yellow small flowers">
+                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/6.jpg" alt="yellow small flowers">
                             </div>
                             <p class="date-published">2017-11-18</p>
                             <h2 class="blog-post-title">Staying inspired by others</h2>
