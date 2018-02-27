@@ -12,7 +12,7 @@
         <title>Blog Template for Bootstrap</title>
 
         <!-- Custom styles for this template -->
-         <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet"> 
+         <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet"> 
 <!--        <link rel="stylesheet" type="text/css" href="style.css">-->
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
         
