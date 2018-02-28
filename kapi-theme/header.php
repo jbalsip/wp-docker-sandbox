@@ -19,7 +19,7 @@
         <?php wp_head();?>
     </head>
     
-    <body>
+    <body <?php body_class(); ?>>
     <div class="nav-background">
         &nbsp;
     </div>

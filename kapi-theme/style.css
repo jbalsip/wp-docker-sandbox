@@ -266,9 +266,16 @@ footer {
         top: 0;
         bottom: inherit;
     }
+    .admin-bar .nav-background {
+        top: 32px;
+    }
     .menu-container {
         top: 0;
         bottom: inherit;
+    }
+
+    .admin-bar .menu-container {
+        top: 32px;
     }
     .topnav {
         top: 0;
