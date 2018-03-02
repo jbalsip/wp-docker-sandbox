@@ -6,15 +6,11 @@
             <script>
             (function () {
                 //  Hamburger Button
-                document.getElementById("click").onclick = myFunction;
+                document.getElementById("click").onclick = toggleMenu;
                 
-                function myFunction() {
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "topnav";
-                    }
+                function toggleMenu() {
+                    document.getElementById("myTopnav")
+                        .classList.toggle("responsive");
                 }
                 
                 //  Back To Top Button
