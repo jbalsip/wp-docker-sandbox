@@ -47,8 +47,12 @@
             </div>
         </div>
 
-        <div class="blog-title">
-            <h1>🐻Kuma no oshiri</h1>
-            <p class="blog-description">All about Kapibara and their friend Kuma!</p>
+        <div class="blog-header">
+            <h1 class="blog-title">
+                <a href="<?php echo get_bloginfo('url'); ?>">
+                    <?php echo get_bloginfo('name'); ?>
+                </a>
+            </h1>
+            <p class="blog-description"><?php echo get_bloginfo('description'); ?></p>
         </div>
 
