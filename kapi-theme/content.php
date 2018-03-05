@@ -1,6 +1,6 @@
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <img class="featured-image" src="<?php echo get_bloginfo('template_directory'); ?>/images/1.jpg" alt="stationaries on a desk"></div>
+                                <?php the_post_thumbnail('medium', array( 'class' => 'featured-image' )); ?></div>
                             <p class="date-published">
                                 <?php the_date(); ?> by <a href="#"><?php the_author(); ?></a>
                             </p>
