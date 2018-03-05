@@ -5,7 +5,7 @@
                                 <?php the_date(); ?> by <a href="#"><?php the_author(); ?></a>
                             </p>
                             <h2 class="blog-post-title"><?php the_title(); ?></h2>
-                            <p class=""><?php the_content(); ?></p>
+                            <p class=""><?php the_excerpt(); ?></p>
                         </div>
 
                     
