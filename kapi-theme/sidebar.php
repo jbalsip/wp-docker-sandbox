@@ -29,4 +29,4 @@
                 </div>
             </div>
 
-            <button id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+            <button id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
