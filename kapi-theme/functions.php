@@ -5,9 +5,7 @@
         return 20;
     }
     add_filter('excerpt_length', 'my_excerpt_length');
-?>
 
-<?php
     function archive_navi_template($template){
 	$template = '
 	<nav class="navigation %1$s" role="navigation">
