@@ -13,13 +13,11 @@
                     </div>
                     <div class="page-navigator">
                         <?php
-                        			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous' ),
-				'next_text'          => __( 'Next' ),
-//				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page' ) . ' </span>',
-			) );
-
+                            // Previous/next page navigation.
+                            the_posts_pagination( array(
+                                'prev_text'          => __( 'Previous' ),
+                                'next_text'          => __( 'Next' ),
+                            ) );
                         ?>
                     </div>
                 </div>
