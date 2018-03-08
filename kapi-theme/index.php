@@ -9,7 +9,6 @@
 //                            the_post_thumbnail();
                             endwhile; endif; 
                         ?> 
-<!--                        <?php get_template_part( 'content', get_post_format() ); ?> -->
                     </div>
                     <div class="page-navigator">
                         <?php

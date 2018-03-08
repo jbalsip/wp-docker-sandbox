@@ -1,6 +1,6 @@
                         <div class="blog-post-summary">
                             <div class="image-container">
-                                <a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_post_thumbnail('medium', array( 'class' => 'featured-image' )); ?></a>
+                                <a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_post_thumbnail('medium', array( 'class' => 'featured-image thumnail' )); ?></a>
                             </div>
                             <p class="date-published">
                                 <?php the_time(get_option('date_format')); ?> by <a href="#"><?php the_author(); ?></a>
