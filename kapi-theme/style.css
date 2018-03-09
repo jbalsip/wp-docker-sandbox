@@ -196,10 +196,25 @@ h1, h2, ul {
     height: 12em;
 }
 
+.page-navigator.single {
+    clear: both;
+    padding: 0 2.5%;
+}
+.previous-post {
+    float: left;
+}
+.next-post {
+    float: right;
+}
+
 /* page navigation */
 .page-navigator {
     clear: both;
     text-align: center;
+}
+.page-navigator a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* side contents */

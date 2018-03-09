@@ -18,13 +18,17 @@
                             <p class=""><?php the_content(); ?></p>
                         </div>
                     </div>
-                    <div class="page-navigator">
+                    <div class="page-navigator single">
+<!--
                         <?php 
                             the_post_navigation( array(
-                            'prev_text'           => 'Previous Post - %title',
-                            'next_text'           => 'Next Post - %title',
+                            'prev_text'           => '« Previous Post: %title',
+                            'next_text'           => '» Next Post: %title',
                             ) ); 
                         ?>
+-->
+                        <span class="previous-post"><?php previous_post_link( '« %link', '%title' ); ?></span>
+                        <span class="next-post"><?php next_post_link( '%link »' , '%title' ); ?></span>
                     </div>
                 </div><!-- .main-contents -->
 
