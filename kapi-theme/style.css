@@ -196,17 +196,6 @@ h1, h2, ul {
     height: 12em;
 }
 
-.page-navigator.single {
-    clear: both;
-    padding: 0 2.5%;
-}
-.previous-post {
-    float: left;
-}
-.next-post {
-    float: right;
-}
-
 /* page navigation */
 .page-navigator {
     clear: both;
@@ -215,6 +204,17 @@ h1, h2, ul {
 .page-navigator a {
     text-decoration: none;
     color: inherit;
+}
+.page-navigator.single {
+    clear: both;
+    padding: 0 2.5%;
+    text-align: inherit;
+}
+.previous-post {
+    float: left;
+}
+.next-post {
+    float: right;
 }
 
 /* side contents */
