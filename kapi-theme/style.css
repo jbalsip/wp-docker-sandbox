@@ -216,16 +216,20 @@ h1, h2, ul {
 }
 
 /* side contents */
+.side-contents {
+    clear: both;
+}
 .side-contents-container {
     display: block;
-    width: 95%;
+    width: 90%;
     padding: 0 2.5%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    margin-bottom: 1.5em;
-    margin-top: 1em;
+    margin-bottom: 0.75em;
+    margin-top: 1.5em;
 }
 .side-contents-container p {
     margin: 0;
+    border: 1px;
 }
 .side-content {
     padding: 1em;
@@ -379,6 +383,13 @@ footer {
     .image-container.single {
         height: 18em;
     }
+    .side-contents {
+        clear: none;
+    }
+    .side-contents-container {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
 
     #myBtn {
         bottom: 0.5em; /* Place the button at the bottom of the page */
@@ -405,8 +416,17 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+     .topnav {
+        padding-left: 6%;
+    }
+    .social-menu {
+        padding-right: 6%;
+    }
+    .root-container {
+        width: 90%;
+    }
     .main-contents {
-        min-width: 75%;
+        min-width: 70%;
     }
     .blog-post-summary {
         width: 29%;
@@ -417,7 +437,7 @@ footer {
     }
     .side-contents {
         float: left;
-        width: 25%;
+        width: 30%;
     }
 }
 
