@@ -22,7 +22,7 @@
                         <div class="side-content">
                             <h2>Archives</h2>
                             <ul>
-                                <?php wp_get_archives( 'type=monthly' ); ?> 
+                                <?php wp_get_archives(array( 'type' => 'monthly', 'show_post_count' => 1 )); ?> 
                             </ul>
                             <h2>Meta</h2>
                             <ul class="list-unstyled">
