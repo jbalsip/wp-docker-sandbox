@@ -4,6 +4,8 @@
                             <h2>About</h2>
                                 <p><?php the_author_meta( 'description' ); ?></p> 
                         </div>
+                    </div>
+                    <div class="side-contents-container">
                         <div class="side-content">
                             <h2>Recent Posts</h2>
                             <ul>
@@ -24,6 +26,10 @@
                             <ul>
                                 <?php wp_get_archives(array( 'type' => 'monthly', 'show_post_count' => 1 )); ?> 
                             </ul>
+                        </div>
+                    </div>
+                    <div class="side-contents-container">
+                        <div class="side-content">
                             <h2>Meta</h2>
                             <ul class="list-unstyled">
                                 <?php if (is_user_logged_in()) : ?>

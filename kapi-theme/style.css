@@ -187,11 +187,9 @@ h1, h2, ul {
 .blog-post p {
     padding: 0 2.5%;
 }
-
 .blog-post h2 {
     padding: 0 2.5%;
 }
-
 .image-container.single {
     height: 12em;
 }
@@ -222,17 +220,37 @@ h1, h2, ul {
     display: block;
     width: 95%;
     padding: 0 2.5%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5em;
+    margin-top: 1em;
 }
 .side-contents-container p {
     margin: 0;
 }
-
-.side-contents ul {
+.side-content {
+    padding: 1em;
+}
+.side-content ul li {
     list-style-type: none;
     margin: 0;
-    padding: 0;   
-} 
-
+    padding: 0;
+    padding-left: 1rem;
+    position: relative;
+}
+.side-content a {
+    text-decoration: none;
+    color: inherit;
+}
+.side-content ul li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #ebebeb;
+}
 /*scroll to top button*/
 #myBtn {
     display: none; /* Hidden by default */
