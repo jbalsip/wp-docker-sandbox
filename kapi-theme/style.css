@@ -223,6 +223,9 @@ h1, h2, ul {
     width: 95%;
     padding: 0 2.5%;
 }
+.side-contents-container p {
+    margin: 0;
+}
 
 .side-contents ul {
     list-style-type: none;
