@@ -102,6 +102,10 @@ h1, h2, ul {
     text-align: center;
     margin: 1em 0px 0px 0px;
 }
+.blog-title a {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 /* root */
@@ -362,7 +366,8 @@ footer {
         margin-top: 5em;
     }
     .blog-description {
-        margin-bottom: 1.5em;
+        margin-top: 0;
+        margin-bottom: 2em;
     }
     .main-contents {
         float: left;

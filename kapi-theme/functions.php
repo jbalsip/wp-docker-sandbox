@@ -14,4 +14,9 @@
 	return $template;
     }
     add_action( 'navigation_markup_template', 'archive_navi_template' );
+
+    function my_excerpt_more($more) {
+    return '…';
+    }
+    add_filter('excerpt_more', 'my_excerpt_more');
 ?>
