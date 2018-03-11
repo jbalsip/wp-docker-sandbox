@@ -417,10 +417,10 @@ footer {
 
 @media screen and (min-width: 1024px) {
      .topnav {
-        padding-left: 6%;
+        padding-left: 6.5%;
     }
     .social-menu {
-        padding-right: 6%;
+        padding-right: 6.5%;
     }
     .root-container {
         width: 90%;
