@@ -291,6 +291,7 @@ h1, h2, ul {
     font-size: 1.5em; /* Increase font size */
     width: 2em;
     height: 2em;
+    opacity: 0.8;
 }
 
 #myBtn:hover {
