@@ -4,6 +4,7 @@ body {
     background-color: #FFF;
     margin: 0 auto;
     font-family: 'Khula', sans-serif;
+    color: #555;
 }
 
 h1, h2, ul {
@@ -20,7 +21,7 @@ h1, h2, ul {
 .menu-container {
     bottom: 0;
     position: fixed;
-    background-color: black;
+    background-color: #777;
     width: 100%;
     z-index: 9;
 }
@@ -30,7 +31,7 @@ h1, h2, ul {
     bottom: 0;
     position: fixed;
     width: 100%;
-    background-color: black;
+    background-color: #777;
     z-index: 8;
     padding: 0.5em;
 }
@@ -196,6 +197,20 @@ h1, h2, ul {
 }
 .image-container.single {
     height: 12em;
+}
+.aligncenter,
+.alignleft,
+.alignright,
+.alignnone {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-left: 0px;
+}
+.blog-post .content-img-wrap {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* page navigation */
@@ -413,6 +428,9 @@ footer {
     .featured-image.single {
         padding: 0 2.5%;
         width: 95%;
+    }
+    .blog-post .content-img-wrap {
+        padding: 0 2.5%;
     }
     .side-contents {
         float: left;
