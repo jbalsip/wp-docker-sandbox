@@ -33,4 +33,16 @@
     }
     add_action( 'init', 'register_my_menu' );
 
+    function widgetarea_init() {
+    register_sidebar(array(
+        'name'=>'side-content',
+        'id' => 'side-widget',
+        'before_widget'=>'<div id="%1$s" class="%2$s side-contents-container"><div class="side-content">',
+        'after_widget'=>'</div></div>',
+        'before_title' => '<h2 class="sidebar-title">',
+        'after_title' => '</h2>'
+    ));
+    }
+    add_action( 'widgets_init', 'widgetarea_init' );
+
 ?>

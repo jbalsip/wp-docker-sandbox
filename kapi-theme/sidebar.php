@@ -5,21 +5,9 @@
                                 <p><?php the_author_meta( 'description' ); ?></p> 
                         </div>
                     </div>
-                    <div class="side-contents-container">
-                        <div class="side-content">
-                            <h2>Recent Posts</h2>
-                            <ul>
-                                <?php
-                                    $args = array( 'numberposts' => '5' );
-                                    $recent_posts = wp_get_recent_posts( $args );
-                                    foreach( $recent_posts as $recent ){
-                                        echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-                                    }
-                                    wp_reset_query();
-                                ?>
-                            </ul>
-                        </div>
-                    </div>
+                    
+                    <?php dynamic_sidebar( 'side-widget' ); ?>
+
                     <div class="side-contents-container">
                         <div class="side-content">
                             <h2>Archives</h2>

@@ -1,5 +1,7 @@
             <footer>
-                <p>Blog template built for Kapibara and Kuma.</p>
+                <div class="copyright">
+                    <p>copyright ©<?php bloginfo( 'name' ); ?> All Rights Reserved.</p>
+                </div>
             </footer>
         </div>
  
