@@ -66,7 +66,7 @@ h1, h2, ul {
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-    display: none;
+    display: none; 
     cursor: pointer;
 }
 
@@ -326,9 +326,6 @@ footer {
 /* When the screen is less than 500 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */    
     .topnav li:not(:first-child) {
         display: none;
-    }
-    .topnav li:last-child {
-        display: block;
     }
     .topnav a.icon {
         float: right;
