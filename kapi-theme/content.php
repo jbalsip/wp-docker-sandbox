@@ -5,8 +5,9 @@
                             <p class="date-published">
                                 <i class="far fa-calendar fa-fw"></i><?php the_time(get_option('date_format')); ?>
                             </p>
+                            <p class="category"><i class="fas fa-tag fa-fw"></i>category</p>
                             <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-                            <a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><p class=""><?php the_excerpt(); ?></p></a>
+                            <a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_excerpt(); ?></p></a>
                         </div>
 
                     
