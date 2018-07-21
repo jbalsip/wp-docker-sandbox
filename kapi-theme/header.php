@@ -9,7 +9,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Blog Template for Bootstrap</title>
+        <title>
+            <?php if(is_front_page() || is_home()){
+                echo get_bloginfo('name');
+            } else{
+                echo wp_title('');
+            }?>
+        </title>
 
         <!-- Custom styles for this template -->
          <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet"> 
