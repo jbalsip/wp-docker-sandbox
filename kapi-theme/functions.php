@@ -45,4 +45,30 @@
     }
     add_action( 'widgets_init', 'widgetarea_init' );
 
+    add_action( 'customize_register', 'kapi_theme_customize_register' );
+    function kapi_theme_customize_register($wp_customize) {
+        $wp_customize->add_section('social_section', array(
+            'title'          => 'Social Networks'
+        ));
+    
+
+        add_social_network( $wp_customize, 'kapi_social_facebook_id', 'Facebook ID');
+        add_social_network( $wp_customize, 'kapi_social_pinterest_id', 'Pinterest ID');
+        add_social_network( $wp_customize, 'kapi_social_twitter_id', 'Twitter ID');
+        add_social_network( $wp_customize, 'kapi_social_instagram_id', 'Instagram ID');
+        add_social_network( $wp_customize, 'kapi_social_google_id', 'Google+ ID');
+     }
+
+     function add_social_network($wp_customize, $setting_name, $setting_label) {
+        $wp_customize->add_setting($setting_name, array(
+            'default'        => '',
+        ));
+    
+        $wp_customize->add_control($setting_name, array(
+            'label'   => $setting_label,
+            'section' => 'social_section',
+            'type'    => 'text',
+        ));
+     }
+
 ?>

@@ -39,12 +39,24 @@
             </nav>
             <div class="social-menu">
                 <ul>
-                    <li><a href="#facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-                    <li><a href="#twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#googleplus"><i class="fab fa-google-plus"></i></a></li>
-                    <li><a href="#rss"><i class="fas fa-rss"></i></a></li>
+                <?php
+                    function outputSocialMedia($setting_name, $base_url, $class_name) {
+                        $setting_value = get_theme_mod( $setting_name );
+
+                        if ($setting_value != '') {
+                            $target_url = $base_url . $setting_value;
+                            ?>
+                            <li><a href="<?php echo $target_url ?>"><i class="<?php echo $class_name ?>"></i></a></li>
+                            <?php                            
+                        }
+                    }
+                    outputSocialMedia( 'kapi_social_facebook_id', 'https://www.facebook.com/', 'fab fa-facebook-f' );
+                    outputSocialMedia( 'kapi_social_pinterest_id', 'https://www.pinterest.com/', 'fab fa-pinterest-p' );
+                    outputSocialMedia( 'kapi_social_twitter_id', 'https://twitter.com/', 'fab fa-twitter' );
+                    outputSocialMedia( 'kapi_social_instagram_id', 'https://www.instagram.com/', 'fab fa-instagram' );
+                    outputSocialMedia( 'kapi_social_google_id', 'https://plus.google.com/', 'fab fa-google-plus' );
+                ?>
+                    <li><a href="<?php bloginfo('rss2_url'); ?>"><i class="fas fa-rss"></i></a></li>
                 </ul>
             </div>
         </div>
