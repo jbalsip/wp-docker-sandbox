@@ -57,6 +57,18 @@
         add_social_network( $wp_customize, 'kapi_social_twitter_id', 'Twitter ID');
         add_social_network( $wp_customize, 'kapi_social_instagram_id', 'Instagram ID');
         add_social_network( $wp_customize, 'kapi_social_google_id', 'Google+ ID');
+
+        $wp_customize->add_setting( 'kapi_social_show_rss', array(
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => 'themeslug_sanitize_checkbox',
+          ) );
+          
+          $wp_customize->add_control( 'kapi_social_show_rss', array(
+            'type' => 'checkbox',
+            'section' => 'social_section', // Add a default or your own section
+            'label' => __( 'Show RSS' ),
+            'description' => __( 'Shows or hides the RSS feed icon in the navigation menu' ),
+          ) );
      }
 
      function add_social_network($wp_customize, $setting_name, $setting_label) {
@@ -70,5 +82,12 @@
             'type'    => 'text',
         ));
      }
+
+     function themeslug_sanitize_checkbox( $checked ) {
+       // Boolean check.
+       return ( ( isset( $checked ) && true == $checked ) ? true : false );
+     }
+
+
 
 ?>

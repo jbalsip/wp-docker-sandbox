@@ -55,8 +55,12 @@
                     outputSocialMedia( 'kapi_social_twitter_id', 'https://twitter.com/', 'fab fa-twitter' );
                     outputSocialMedia( 'kapi_social_instagram_id', 'https://www.instagram.com/', 'fab fa-instagram' );
                     outputSocialMedia( 'kapi_social_google_id', 'https://plus.google.com/', 'fab fa-google-plus' );
+
+                    if (get_theme_mod( 'kapi_social_show_rss' ) == true) {
+                        ?>
+                        <li><a href="<?php bloginfo('rss2_url'); ?>"><i class="fas fa-rss"></i></a></li>
+                    <?php }
                 ?>
-                    <li><a href="<?php bloginfo('rss2_url'); ?>"><i class="fas fa-rss"></i></a></li>
                 </ul>
             </div>
         </div>
