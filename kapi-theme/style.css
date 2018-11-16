@@ -12,6 +12,18 @@ h1, h2, ul {
     margin: 0;
 }
 
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 #page {
     width: 100%;
     margin: 0 auto;
@@ -48,7 +60,7 @@ h1, h2, ul {
     padding: 0;
 }
 
-.topnav a {
+.topnav a, .topnav .button1 {
     display: block;
     position: relative; 
     float: left;
@@ -58,7 +70,7 @@ h1, h2, ul {
     padding: 0.5em;
 }
 
-.topnav a:hover, .social-menu a:hover {
+.topnav a:hover, .social-menu a:hover, .topnav .button1:hover {
     background-color: #ddd;
     color: black;
 }
@@ -87,7 +99,7 @@ h1, h2, ul {
     float: left;
 }
 
-.social-menu a {
+.social-menu a, .button1 {
     display: block;
     position: relative;
     text-align: center;
@@ -305,6 +317,32 @@ h1, h2, ul {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
+/*search button*/
+#show-search-modal {
+    font-weight: 900;
+}
+
+.form1{
+    padding-left: 1em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: darkgray;
+    
+}
+
+.input1{
+    appearance: none;
+    border:none;
+    background: none;
+    padding-right: 50px;    
+}
+
+.button1{
+	position:relative;
+    appearance: none;
+    border: none;
+    background: none;
+}
 /* footer */
 /*
 footer::before {

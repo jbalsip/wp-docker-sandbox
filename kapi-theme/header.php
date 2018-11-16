@@ -61,6 +61,11 @@
                         <li><a href="<?php bloginfo('rss2_url'); ?>"><i class="fas fa-rss"></i></a></li>
                     <?php }
                 ?>
+                    <li><a href="#rss"><i class="fas fa-rss"></i></a></li>
+                    <li><a href="#rss"><i class="fas fa-search"></i></a></li>
+                    <li><button class="button1" id="show-search-modal" data-uk-toggle="target: #search-modal" type="button">
+                        <span><i class="fas fa-search"></i></span>
+                    </button></li>
                 </ul>
             </div>
         </div>

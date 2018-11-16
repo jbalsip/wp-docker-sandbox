@@ -10,6 +10,11 @@
 
                     <div class="side-contents-container">
                         <div class="side-content">
+                                <?php get_search_form(); ?>
+                        </div>
+                    </div>
+                    <div class="side-contents-container">
+                        <div class="side-content">
                             <h2>Archives</h2>
                             <ul>
                                 <?php wp_get_archives(array( 'type' => 'monthly', 'show_post_count' => 1 )); ?> 
