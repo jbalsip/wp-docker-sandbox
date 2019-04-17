@@ -62,10 +62,9 @@
                     <?php }
                 ?>
                     <li><a href="#rss"><i class="fas fa-rss"></i></a></li>
-                    <li><a href="#rss"><i class="fas fa-search"></i></a></li>
-                    <li><button class="button1" id="show-search-modal" data-uk-toggle="target: #search-modal" type="button">
+                    <li><div class="button1" id="search-button" type="button">
                         <span><i class="fas fa-search"></i></span>
-                    </button></li>
+                    </div></li>
                 </ul>
             </div>
         </div>
