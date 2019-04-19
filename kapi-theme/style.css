@@ -323,7 +323,7 @@ input, button, textarea, select {
 }
 
 
-.form1{
+/* .form1{
     padding-left: 1em;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -342,7 +342,39 @@ input, button, textarea, select {
 
 .button2 i {
     vertical-align: middle;
-}
+} */
+
+.searchform {
+    position: relative;
+  }
+            
+  .searchfield {
+    font-size: 14px;
+    width: 90%;
+    margin: 3px;
+    padding: 10px;
+    background-color: #ebebeb;
+  }
+      
+  .searchsubmit {
+    font-family: FontAwesome;
+    font-size: 1.0em;
+    position: absolute;
+    top: 0;
+    right: 8%;
+    margin-top: 0.8em;
+    padding: 0;
+    cursor: pointer;
+    color: #555;
+    border: none;
+    background: transparent;
+  }
+      
+  .searchsubmit:hover {
+    opacity: .6;
+  }
+
+
 /* footer */
 /*
 footer::before {

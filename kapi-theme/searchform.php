@@ -1,7 +1,9 @@
-<form method="get" action="<?php echo home_url('/'); ?>" class="form1">
+<form method="get" class="searchform" action="<?php echo esc_url( home_url('/') ); ?>">
+
 <div>
-<input name="s" type="text" class="input1"  type="search" placeholder="Search...">
-<span type="submit" class="button2" type="submit">
+	<input type="text" placeholder="Search..." name="s" class="searchfield" value="" />
+	<button type="submit" class="searchsubmit">
 	<i class="fas fa-search"></i>
-</span>
-</div>
+	</button>
+</div>	
+</form>
