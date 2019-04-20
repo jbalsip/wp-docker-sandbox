@@ -322,28 +322,6 @@ input, button, textarea, select {
     cursor: pointer; /* Add a mouse pointer on hover */
 }
 
-
-/* .form1{
-    padding-left: 1em;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #ebebeb;
-    
-}
-
-.input1{
-    line-height: 2em;
-    width: 85%;
-}
-
-.button2{
-    position: absolute;
-}
-
-.button2 i {
-    vertical-align: middle;
-} */
-
 .searchform {
     position: relative;
   }
