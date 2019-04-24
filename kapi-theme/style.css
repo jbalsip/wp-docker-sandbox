@@ -236,6 +236,7 @@ input, button, textarea, select {
 .page-navigator {
     clear: both;
     text-align: center;
+    padding-top: 3em;
 }
 .page-navigator a {
     text-decoration: none;
@@ -410,18 +411,22 @@ input, button, textarea, select {
 
 
 /* footer */
-/*
+
 footer::before {
     content:"";
     display: block;
     clear: both;
 }
-*/
+
 
 footer {
     clear: both;
     text-align: center;
     padding-bottom: 2em;
+}
+
+.copyright {
+    padding-top: 1.5em;
 }
 
 /* media query */
