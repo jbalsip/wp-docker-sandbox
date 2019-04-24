@@ -379,14 +379,14 @@ input, button, textarea, select {
    }
 
    .searchform.s-modal {
-    width: 20em;
+    width: 15em;
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
 }
 
   .searchsubmit.s-modal {
-    right:1.5em;
+    right:6%;
   }
 
   .searchbox {
