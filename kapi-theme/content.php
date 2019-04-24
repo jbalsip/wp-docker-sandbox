@@ -14,7 +14,7 @@
                                     <i class="far fa-calendar fa-fw"></i>',
                                     the_time(get_option('date_format'));}
                                 ?>
-                            <p class="category"><i class="fas fa-tag fa-fw"></i>category</p>
+                            <?php the_category(); ?>
                             <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                             <a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_excerpt(); ?></p></a>
                         </div>

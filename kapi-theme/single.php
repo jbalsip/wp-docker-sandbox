@@ -23,6 +23,7 @@
                                     <i class="far fa-calendar fa-fw"></i>',
                                     the_time(get_option('date_format'));}
                                 ?>
+                                <?php the_category(); ?>
                             <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>", title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
                             <p class=""><?php the_content(); ?></p>
                         </div>

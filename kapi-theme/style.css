@@ -202,11 +202,22 @@ input, button, textarea, select {
     color: inherit;
 }
 
-.blog-post-summary .category {    
+.blog-post-summary .post-categories  {
+    list-style-type: none;
     padding: 0.05em inherit;
     font-size: 0.8em;
     margin: 0;
 }
+
+.blog-post-summary .post-categories li {
+    display: inline;
+}
+
+.blog-post-summary .post-categories li:before {
+    font-family: FontAwesome;
+    content: '\f02b';
+    margin-right: .1em;
+  }
 
 
 /* single post */
