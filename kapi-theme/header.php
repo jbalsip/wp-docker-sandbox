@@ -55,6 +55,8 @@
                     outputSocialMedia( 'kapi_social_twitter_id', 'https://twitter.com/', 'fab fa-twitter' );
                     outputSocialMedia( 'kapi_social_instagram_id', 'https://www.instagram.com/', 'fab fa-instagram' );
                     outputSocialMedia( 'kapi_social_google_id', 'https://plus.google.com/', 'fab fa-google-plus' );
+                    outputSocialMedia( 'kapi_social_github_id', 'https://github.com/', 'fab fa-github' );
+                    
 
                     if (get_theme_mod( 'kapi_social_show_rss' ) == true) {
                         ?>
