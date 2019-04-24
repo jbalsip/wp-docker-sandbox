@@ -56,7 +56,6 @@
         add_social_network( $wp_customize, 'kapi_social_pinterest_id', 'Pinterest ID');
         add_social_network( $wp_customize, 'kapi_social_twitter_id', 'Twitter ID');
         add_social_network( $wp_customize, 'kapi_social_instagram_id', 'Instagram ID');
-        add_social_network( $wp_customize, 'kapi_social_google_id', 'Google+ ID');
         add_social_network( $wp_customize, 'kapi_social_github_id', 'GitHub ID');
         
 

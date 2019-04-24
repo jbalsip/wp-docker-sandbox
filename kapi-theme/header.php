@@ -46,7 +46,7 @@
                         if ($setting_value != '') {
                             $target_url = $base_url . $setting_value;
                             ?>
-                            <li><a href="<?php echo $target_url ?>"><i class="<?php echo $class_name ?>"></i></a></li>
+                            <li><a href="<?php echo $target_url ?>" target="_blank"><i class="<?php echo $class_name ?>"></i></a></li>
                             <?php                            
                         }
                     }
@@ -54,7 +54,6 @@
                     outputSocialMedia( 'kapi_social_pinterest_id', 'https://www.pinterest.com/', 'fab fa-pinterest-p' );
                     outputSocialMedia( 'kapi_social_twitter_id', 'https://twitter.com/', 'fab fa-twitter' );
                     outputSocialMedia( 'kapi_social_instagram_id', 'https://www.instagram.com/', 'fab fa-instagram' );
-                    outputSocialMedia( 'kapi_social_google_id', 'https://plus.google.com/', 'fab fa-google-plus' );
                     outputSocialMedia( 'kapi_social_github_id', 'https://github.com/', 'fab fa-github' );
                     
 
