@@ -8,10 +8,9 @@
 
 <div class="root-container">
     <div class="main-contents">
+        <h2 class="searchresult"><?php echo $search_query; ?>: Search Results<span>（<?php echo $total_results; ?>）</span></h2>
         <div class="blog-posts-container">
-            <h1 class="searchresult"><?php echo $search_query; ?>: Search Results<span>（<?php echo $total_results; ?>）</span></h1>
-
-
+    
                 <?php
                 if( $total_results >0 ):
                 if(have_posts()):
@@ -36,30 +35,9 @@
                     </div>
                 </div>
 
-
-</div>
-
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
-
-
-<?php get_header(); ?>
-            <div class="root-container">
-
-                        <?php 
-                            if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-
-                            get_template_part( 'content', get_post_format() ); 
-//                            the_post_thumbnail();
-                            endwhile; endif; 
-                        ?> 
-
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
-
 
 
 
