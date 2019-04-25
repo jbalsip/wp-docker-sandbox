@@ -63,7 +63,7 @@
                         <li><a href="<?php bloginfo('rss2_url'); ?>"><i class="fas fa-rss"></i></a></li>
                     <?php }
                 ?>
-                    <li><div class="button1" id="search-button" type="button">
+                    <li><div class="searchbtn" id="search-button" type="button">
                         <span><i class="fas fa-search"></i></span>
                     </div></li>
                 </ul>

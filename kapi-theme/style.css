@@ -62,7 +62,7 @@ input, button, textarea, select {
     padding: 0;
 }
 
-.topnav a, .topnav .button1 {
+.topnav a, .topnav .searchbtn {
     display: block;
     position: relative; 
     float: left;
@@ -72,7 +72,7 @@ input, button, textarea, select {
     padding: 0.5em;
 }
 
-.topnav a:hover, .social-menu a:hover, .topnav .button1:hover, #search-button:hover {
+.topnav a:hover, .social-menu a:hover, .topnav .searchbtn:hover, #search-button:hover {
     background-color: #ddd;
     color: black;
 }
@@ -100,7 +100,7 @@ input, button, textarea, select {
     float: left;
 }
 
-.social-menu a, .button1 {
+.social-menu a, .searchbtn {
     display: block;
     position: relative;
     text-align: center;
