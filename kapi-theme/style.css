@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Khula');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 
 body {
     background-color: #FFF;
     margin: 0 auto;
-    font-family: 'Khula', sans-serif;
+    font-family: 'Khula','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',"M PLUS 1p", sans-serif;
     color: #555;
+    font-size: 0.9em;
 }
 
 h1, h2, ul {
@@ -74,7 +76,6 @@ input, button, textarea, select {
     background-color: #ddd;
     color: black;
 }
-
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -209,11 +210,21 @@ input, button, textarea, select {
     margin: 0;
 }
 
-.blog-post-summary .post-categories li {
+.blog-post .post-categories {
+    list-style-type: none;
+    padding-left: 2.5%;
+}
+
+.blog-post .post-categories a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-categories li {
     display: inline;
 }
 
-.blog-post-summary .post-categories li:before {
+.post-categories li:before {
     font-family: FontAwesome;
     content: '\f02b';
     margin-right: .1em;
