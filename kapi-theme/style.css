@@ -62,10 +62,13 @@ input, button, textarea, select {
     padding: 0;
 }
 
+.topnav li {
+    float: left;
+}
+
 .topnav a, .topnav .searchbtn {
     display: block;
     position: relative; 
-    float: left;
     text-align: center;
     color: white;
     text-decoration: none;
@@ -75,6 +78,28 @@ input, button, textarea, select {
 .topnav a:hover, .social-menu a:hover, .topnav .searchbtn:hover, #search-button:hover {
     background-color: #ddd;
     color: black;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    /* top: 2.6em; */
+    top: 100%;
+    /* width: 100%; */
+    background-color: #777;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu ul {
+    clear: left;
+    float: none;
+}
+
+.menu-item-has-children {
+    position: relative;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
