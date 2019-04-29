@@ -112,7 +112,7 @@ input, button, textarea, select {
 .social-menu {
     bottom: 0;
     z-index: 9;
-    padding-right: 2em;
+    padding-right: 0.5em;
 }
 
 .social-menu ul {
@@ -512,6 +512,10 @@ footer {
         opacity: 0.9;
         filter: alpha(opacity=90); /* for IE8 and earlier */
     }
+
+    .side-contents-container {
+        margin-left: 2.5%;
+    }
 }
 
 @media screen and (min-width: 500px) {
@@ -567,12 +571,11 @@ footer {
     .image-container.single {
         height: 18em;
     }
-    .side-contents {
-        clear: none;
-    }
+
     .side-contents-container {
         margin-top: 0;
         margin-bottom: 1.5em;
+        margin-left: 2.5%;
     }
 
     #myBtn {
@@ -596,9 +599,11 @@ footer {
     .blog-post .content-img-wrap {
         padding: 0 2.5%;
     }
+
     .side-contents {
         float: left;
         width: 33.33%;
+        clear: none;
     }
 }
 
