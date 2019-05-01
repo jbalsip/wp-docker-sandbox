@@ -33,10 +33,8 @@
     <div id="page">
         <div class="menu-container">
             <nav class="topnav" id="myTopnav">
-                <?php wp_nav_menu( array( 'theme_location' => 'header-menu'));?>
-                <ul>
-                    <li><a class="icon" id="click"><i class="fas fa-bars"></i></a></li>
-                </ul>
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu'));?>
+            <button type="button" class="icon" id="click"><i class="fas fa-bars"></i></button>
             </nav>
             <div class="social-menu">
                 <ul>
