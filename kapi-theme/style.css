@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Khula');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 
 body {
     background-color: #FFF;
     margin: 0 auto;
-    font-family: 'Khula', sans-serif;
+    font-family: 'Khula','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',"M PLUS 1p", sans-serif;
+    color: #555;
+    font-size: 0.9em;
 }
 
-h1, h2 {
+h1, h2, ul {
     padding: 0;
     margin: 0;
+}
+
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 #page {
@@ -16,24 +31,29 @@ h1, h2 {
     margin: 0 auto;
 }
 
+/* menu */
+.menu-container {
+    bottom: 0;
+    position: fixed;
+    background-color: #777;
+    width: 100%;
+    z-index: 9;
+}
+
 /* navigation */
 .nav-background {
     bottom: 0;
     position: fixed;
     width: 100%;
-    background-color: black;
-    z-index: 9;
+    background-color: #777;
+    z-index: 8;
     padding: 0.5em;
 }
 
 .topnav {
-    overflow: hidden;
     bottom: 0;
-    position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: black;
-/*    padding: 6px 0; */
 }
 
 .topnav ul {
@@ -42,40 +62,90 @@ h1, h2 {
     padding: 0;
 }
 
-.topnav a {
+.topnav li {
+    float: left;
+}
+
+.topnav a, .topnav .searchbtn {
     display: block;
     position: relative; 
-    float: left;
     text-align: center;
     color: white;
     text-decoration: none;
     padding: 0.5em;
 }
 
-.topnav a:hover {
+.topnav a:hover, .social-menu a:hover, .topnav .searchbtn:hover, #search-button:hover {
     background-color: #ddd;
     color: black;
 }
 
+.sub-menu {
+    display: none;
+    position: absolute;
+    /* top: 2.6em; */
+    top: 100%;
+    /* width: 100%; */
+    background-color: #777;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu ul {
+    clear: left;
+    float: none;
+}
+
+.menu-item-has-children {
+    position: relative;
+}
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-    display: none;
+    display: none; 
     cursor: pointer;
 }
 
+/* Social Menu */
+.social-menu {
+    bottom: 0;
+    z-index: 9;
+    padding-right: 0.5em;
+}
+
+.social-menu ul {
+    list-style: none;
+    float: right;
+}
+
+.social-menu li {
+    color: white;
+    float: left;
+}
+
+.social-menu a, .searchbtn {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
 
 /* title */
-.blog-title {
+.blog-header {
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    margin: 2em 0px 0px 0px;
+    margin: 1em 0px 0px 0px;
+}
+.blog-title a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.blog-title .blog-description {
-    margin: 0;
-}
 
 /* root */
 .root-container {
@@ -111,77 +181,292 @@ h1, h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1.0;
-    filter: alpha(opacity=100); /* for IE8 and earlier */
-    transition: all 0.5s; /* Animation */
 }
 
-.featured-image:hover {
+.featured-image.thumnail {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* for IE8 and earlier */
+    transition: transform 0.5s linear; /* Animation */
+    -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
+
+}
+
+.featured-image.thumnail:hover {
     opacity: 0.5;
     filter: alpha(opacity=50); /* for IE8 and earlier */
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
 }
 
 .blog-post-summary h2 {
     font-size: 1.1em;
     padding: 0 2.5%;
 }
-
-.blog-post-summary .date-published {
+.blog-post-summary p {
+    padding: 0 2.5%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.blog-post-summary .date-published,
+.blog-post-summary .date-updated
+ {
     display: block;
-    margin: 0.5em 0;
+    margin: 0;
+    margin-top: 0.5em;
     font-size: 0.8em;
     line-height: 1.2em;
 }
 
-.blog-post-summary p {
-    margin: 0.8em 0;
+.blog-post-title a, .blog-post-summary a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post-summary .post-categories  {
+    list-style-type: none;
+    padding: 0.05em inherit;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.blog-post .post-categories {
+    list-style-type: none;
+    padding-left: 2.5%;
+}
+
+.blog-post .post-categories a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-categories li {
+    display: inline;
+}
+
+.post-categories li:before {
+    font-family: FontAwesome;
+    content: '\f02b';
+    margin-right: .1em;
+  }
+
+
+/* single post */
+.blog-post p {
     padding: 0 2.5%;
+}
+.blog-post h2 {
+    padding: 0 2.5%;
+}
+.image-container.single {
+    height: 12em;
+}
+.aligncenter,
+.alignleft,
+.alignright,
+.alignnone {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-left: 0px;
+}
+.blog-post .content-img-wrap {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* page navigation */
+.page-navigator {
+    clear: both;
+    text-align: center;
+    padding-top: 3em;
+}
+.page-navigator a {
+    text-decoration: none;
+    color: inherit;
+}
+.page-navigator.single {
+    clear: both;
+    padding: 0 2.5%;
+    text-align: inherit;
+}
+.previous-post {
+    float: left;
+}
+.next-post {
+    float: right;
 }
 
 /* side contents */
+.side-contents {
+    clear: both;
+}
 .side-contents-container {
     display: block;
-    width: 95%;
+    width: 90%;
     padding: 0 2.5%;
-    
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0.75em;
+    margin-top: 1.5em;
 }
-
-.side-contents ul {
+.side-contents-container p {
+    margin: 0;
+    border: 1px;
+}
+.side-content {
+    padding: 1em;
+}
+.side-content ul li {
     list-style-type: none;
     margin: 0;
     padding: 0;
-} 
-
+    padding-left: 1rem;
+    position: relative;
+}
+.side-content a {
+    text-decoration: none;
+    color: inherit;
+}
+.side-content ul li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #ebebeb;
+}
 /*scroll to top button*/
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-    bottom: 3em; /* Place the button at the bottom of the page */
-    right: 1em; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
+    bottom: 2em; /* Place the button at the bottom of the page */
+    right: 0.3em; /* Place the button 30px from the right */
+    z-index: 99999; /* Make sure it does not overlap */
     border: none; /* Remove borders */
-    outline: none; /* Remove outline */
+    outline: ntextone; /* Remove outline */
     background-color: dimgrey; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 1.8em; /* Increase font size */
+    padding: 0; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 1.5em; /* Increase font size */
+    width: 2em;
+    height: 2em;
+    opacity: 0.8;
 }
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
+/*search button*/
+#search-button:hover {
+    cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+.searchform {
+    position: relative;
+  }
+            
+  .searchfield {
+    font-size: 14px;
+    width: 90%;
+    margin: 3px;
+    padding: 10px;
+    background-color: #ebebeb;
+  }
+      
+  .searchsubmit {
+    font-family: FontAwesome;
+    font-size: 1.0em;
+    position: absolute;
+    top: 0;
+    right: 8%;
+    margin-top: 0.8em;
+    padding: 0;
+    cursor: pointer;
+    color: #555;
+    border: none;
+    background: transparent;
+  }
+      
+  .searchsubmit:hover {
+    opacity: .6;
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    vertical-align: middle;
+   }
+
+   .searchform.s-modal {
+    width: 15em;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+  .searchsubmit.s-modal {
+    right:6%;
+  }
+
+  .searchbox {
+      width: 95%;
+      height: 100%;
+      margin: auto;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+  }
+
+
 /* footer */
-/*
+
 footer::before {
     content:"";
     display: block;
     clear: both;
 }
-*/
+
 
 footer {
     clear: both;
@@ -189,24 +474,29 @@ footer {
     padding-bottom: 2em;
 }
 
+.copyright {
+    padding-top: 1.5em;
+}
+
 /* media query */
 @media screen and (max-width: 500px) {   /* max-width: 499px? */
     
 /* When the screen is less than 500 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */    
-    .topnav li:not(:first-child) {
+    .topnav li {
         display: none;
     }
-    .topnav li:last-child {
+    .topnav .icon {
+        float: left;
         display: block;
-    }
-    .topnav a.icon {
-        float: right;
-        display: block;
-        padding-right: 0.8em;
+        position: relative;
+        text-align: center;
+        color: white;
+        padding: 0.5em;
+        left: 0.5em;
     }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-    .topnav.responsive li:not(:first-child) {
+    .topnav.responsive li {
         display: block;
     }
 /*    .topnav.responsive {
@@ -214,29 +504,61 @@ footer {
     }*/
     .topnav.responsive .icon {
         position: absolute;
-        right: 0;
-        bottom: 0;
+        float: left;
+        display: block;
+        left: 0.5em;
     }
-    .topnav.responsive a {
+    .topnav.responsive li {
         float: none;
         display: block;
-        text-align: left;
     }
-    .topnav {
+/* 
+    .topnav.responsive a {
+        text-align: left;
+    } */
+
+    .menu-container {
         opacity: 0.9;
         filter: alpha(opacity=90); /* for IE8 and earlier */
     }
+
+    .side-contents-container {
+        margin-left: 2.5%;
+    }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 500px) {
     .nav-background {
         top: 0;
         bottom: inherit;
+    }
+    .admin-bar .nav-background {
+        top: 32px;
+    }
+    .menu-container {
+        top: 0;
+        bottom: inherit;
+    }
+
+    .admin-bar .menu-container {
+        top: 32px;
     }
     .topnav {
         top: 0;
         bottom: inherit;
         padding-left: 1.5%;
+    }
+    .social-menu {
+        top: 0;
+        bottom: inherit;
+        padding-right: 1.5%;
+    }
+    .blog-header {
+        margin-top: 5em;
+    }
+    .blog-description {
+        margin-top: 0;
+        margin-bottom: 2em;
     }
     .main-contents {
         float: left;
@@ -251,13 +573,24 @@ footer {
     }
     .blog-post-summary h2,
     .blog-post-summary .date-published,
+    .blog-post-summary .date-updated,
     .blog-post-summary p, footer {
         padding: 0;
     }
-    #myBtn {
-        bottom: 2em; /* Place the button at the bottom of the page */
-        right: 2em; /* Place the button 30px from the right */
+    .image-container.single {
+        height: 18em;
+    }
 
+    .side-contents-container {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+        margin-left: 2.5%;
+    }
+
+    #myBtn {
+        bottom: 0.5em; /* Place the button at the bottom of the page */
+        right: 1.0em; /* Place the button 30px from the right */
+        font-size: 1.8em;
     }
 }
 
@@ -268,28 +601,49 @@ footer {
     .blog-post-summary {
         width: 45%;
     }
+    .featured-image.single {
+        padding: 0 2.5%;
+        width: 95%;
+    }
+    .blog-post .content-img-wrap {
+        padding: 0 2.5%;
+    }
+
     .side-contents {
         float: left;
         width: 33.33%;
+        clear: none;
     }
 }
 
 @media screen and (min-width: 1024px) {
+     .topnav {
+        padding-left: 6.5%;
+    }
+    .social-menu {
+        padding-right: 6.5%;
+    }
+    .root-container {
+        width: 90%;
+    }
     .main-contents {
-        max-width: 75%;
+        min-width: 70%;
     }
     .blog-post-summary {
         width: 29%;
         padding: 0 2%;
     }
+    .image-container.single {
+        height: 26em;
+    }
     .side-contents {
         float: left;
-        width: 25%;
+        width: 30%;
     }
 }
 
 @media screen and (min-width: 1250px) {
-    #page {
+    #page , .menu-container {
         width: 1250px;
     }
 }
