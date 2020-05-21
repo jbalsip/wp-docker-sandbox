@@ -1,22 +1,28 @@
-version: '2'
+version: '3'
 
 services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_pass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+
   my-wp:
     image: wordpress
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_pass
+      WORDPRESS_DB_NAME: wordpress
+    links:
+      - db
     volumes:
       - ./test-theme:/var/www/html/wp-content/themes/test-theme
       - ./bootstrap-theme:/var/www/html/wp-content/themes/bootstrap-theme
       - ./kapi-theme:/var/www/html/wp-content/themes/kapi-theme
-    ports:
-      - "8080:80"
-    environment:
-      WORDPRESS_DB_PASSWORD: ChangeMeIfYouWant
-
-  mysql:
-    image: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: ChangeMeIfYouWant
-
-volumes:
-  test-theme:
-  bootstrap-theme:
